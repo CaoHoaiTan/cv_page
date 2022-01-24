@@ -282,8 +282,8 @@ a :hover{
 
 .project{
   flex: 2;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -291,6 +291,7 @@ a :hover{
 }
 
 .project ul{
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -298,25 +299,11 @@ a :hover{
 
 }
 /* */
-@media (max-width: 799px) {
-  .project ul {
-      max-width: 650px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-top: 24px;
-     
-
-  }
-
-  .project ul li{
-    margin: 0 12px 0 12px;
-    min-width: 300px;
-
-  }
-}
 .project ul li{
   /* list-style: none; */
   flex: 1;
+  max-width:400px;
+
   background-color: #00415f;
   list-style: none;
   display: flex;
@@ -326,7 +313,6 @@ a :hover{
   box-shadow: 5px 5px 10px #012627;
 }
 .project li a{
-  width: 100%;
   font-size: 16px;
   color: #FFFFFF;
   text-decoration: none;
