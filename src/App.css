@@ -4,11 +4,19 @@
   margin: 0px auto 0px auto;
   padding: 32px 0;
   max-width: 1024px;
-  min-width: 920px;
+  min-width: 740;
   min-height: 360px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+}
+/* PC, Tablet */
+@media (min-width: 800px) {
+  .introduce {
+      flex-direction: row;
+      margin: 0px auto 0px auto;
+      align-content: center;
+  }
 }
 
 .contact {
@@ -27,6 +35,7 @@
 .profile{
   display: flex;
   flex-direction: row;
+  min-width:430px;
 }
 
 .avatar{
@@ -110,12 +119,17 @@ a :hover{
   min-width: 920px;
   margin: 0px auto 32px auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   
  
 }
-
+/* PC, Tablet */
+@media (min-width: 800px) {
+  .bodyCV {
+      flex-direction: row;
+  }
+}
 /* Informaiton */
 
 .information{
@@ -123,9 +137,25 @@ a :hover{
    background-color: #3CACAE;
    padding: 32px 0;
    min-height: 360px;
+   max-width: 740px;
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
+}
+
+/**/
+@media (min-width: 500px) and ( max-width: 700px) {
+  .information {
+      flex-direction: column;
+      max-width: 650px;
+  }
+}
+
+@media (max-width: 499px) {
+  .information {
+      flex-direction: column;
+      max-width: 450px;
+  }
 }
 
 .btns{
@@ -135,6 +165,15 @@ a :hover{
    flex-direction: column;
    justify-content: space-around;
    align-items: center;
+}
+
+/**/
+@media (max-width: 799px) {
+  .btns {
+      flex-direction: row;
+      margin: 0 12px 0 12px;
+      flex-wrap:wrap;
+  }
 }
 .btns button{
   min-width: 150px;
@@ -244,11 +283,13 @@ a :hover{
 .project{
   flex: 2;
   margin-left: 24px;
+  margin-right: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   
 }
+
 .project ul{
   display: flex;
   flex-direction: column;
@@ -256,11 +297,26 @@ a :hover{
   align-items: space-around;
 
 }
+/* */
+@media (max-width: 799px) {
+  .project ul {
+      max-width: 650px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 24px;
+     
+
+  }
+
+  .project ul li{
+    margin: 0 12px 0 12px;
+    min-width: 300px;
+
+  }
+}
 .project ul li{
   /* list-style: none; */
   flex: 1;
-  width: 100%;
-  height: 100%;
   background-color: #00415f;
   list-style: none;
   display: flex;
