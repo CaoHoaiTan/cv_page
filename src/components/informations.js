@@ -1,24 +1,60 @@
 
+import {useEffect , useState} from 'react';
+
+const tabs = ['Skills', 'Interests', 'Experience','Certifications','Career objective']
+let data = [ 
+    {
+        kind: "Skills",
+        content: ['Skills','Career','Certifications','abc']
+    },{
+        kind: "Interests",
+        content: ['Cao','Hoài','Tấn','abc']
+    },{
+        kind: "Experience",
+        content: ['Skills','Career','Certifications','abc']
+    },{
+        kind: "Certifications",
+        content: ['Tấn','Đẹp','Trai','abc']
+    },{
+        kind: "Career objective",
+        content: ['Nhứt','Trên','Đời','abc']
+    },
+]
 
 function Informations(){
+
+    const [posts, setPosts] = useState([])
+    const [type, setType] = useState('Skills')
+    useEffect(() => {
+        setPosts(() =>{
+            const show = data.filter((e) => e.kind === `${type}`);
+        
+            // console.log(show[0].content)
+            return show[0].content;
+          })
+        
+    },[type])
     return(
         <div className="information">
                         <div className="btns">
-                            <button  className="btns--active">Skills</button>
-                            <button  className="glow-on-hover">Interests</button>
-                            <button  className="glow-on-hover">Experience</button>
-                            <button  className="glow-on-hover">Certifications</button>
-                            <button  className="glow-on-hover">Career objective</button>
+                            {tabs.map(tab => (
+                            <button
+                                key = {tab}
+                                className = {type === tab ? "btns--active" : "glow-on-hover"}
+                                onClick={() => setType(tab)}
+                            >
+                                {tab}
+                            </button>
+                        ))}
         
                         </div>
         
                         <div className="content">
                             <ul>
-                                <li>Teamwork skill</li>
-                                <li>Language: English</li>
-                                <li>Time managenmen skill</li>
-                                <li>Learning skill</li>
-                                <li>Problem-solving skill</li>
+                                {/* {console.log(posts)} */}
+                                    {posts.map((post,index)=> (
+                                        <li key={index}>{post}</li>
+                                    ))}
                             </ul>
                         </div>
                     </div>
