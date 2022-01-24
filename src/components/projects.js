@@ -30,7 +30,7 @@ function Projects(){
            <ul>
                 {
                   projects.map((project) => (
-                    <li className = {project.id}>
+                    <li key= {project.id} className = {project.id}>
                     <a href={project.linkGitHub} className= {project.id}> <i className="fab fa-github-alt"> </i>{project.name}</a>
                     </li>
                   ))
