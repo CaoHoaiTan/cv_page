@@ -4,7 +4,7 @@ function Contact(){
 <div className="contact">
                   <div className="profile">
                         <div className="avatar">
-                            <img className="avatar__image" src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/217405872_366463801517268_6686034839735714490_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_ohc=3Sntmi46IGoAX9vKvq6&_nc_ht=scontent.fdad2-1.fna&oh=00_AT8rzcigOwQ5dhbcxncX6aCjtluNA5n_1bYTgIchtOY2sA&oe=61F136FA"  alt="Avatar"/>
+                            <img className="avatar__image" src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/217405872_366463801517268_6686034839735714490_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_ohc=gA24h0MVPVIAX-yDIxv&_nc_ht=scontent.fdad2-1.fna&oh=00_AT85z2uOn7LWnjOMUFLv0ndZiWshW7KwiyDKNXFBKfUFYg&oe=6210DAFA"  alt="Avatar"/>
                             <h4 className="avatar__name">Cao Hoài Tấn</h4>   
                         </div>
 
